@@ -3,7 +3,7 @@ from .serializers import ChatCodeSerializer
 from rest_framework import generics
 
 
-class ChatCodeList(generics.ListAPIView):
+class ChatCodeList(generics.ListCreateAPIView):
     serializer_class = ChatCodeSerializer
 
     def get_queryset(self):

@@ -7,4 +7,5 @@ class ChatCodeSerializer(serializers.ModelSerializer):
         fields = (
             'show_name',
             'id',
+            'university',
         )
