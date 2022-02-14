@@ -185,6 +185,10 @@
                       <v-card-text>
                           <v-container>
                             <v-row>
+                              <v-col cols="12" md="12">
+                                <a href="https://smartphones.gadgethacks.com/how-to/invite-people-messenger-group-chats-with-link-so-they-can-join-right-away-wait-approval-0183625/" target="_blank">Creating a facebook group chat link</a><br>
+                                <a href="https://www.alphr.com/discord-create-invite-link/" target="_blank">Creating a discord server link</a>
+                              </v-col>
                               <v-col cols="12" md="4">
                                 <v-text-field
                                   v-model="chat_name"
