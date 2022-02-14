@@ -11,6 +11,7 @@ class Chat(models.Model):
 
     chat_code = models.ForeignKey(ChatCode, on_delete=models.CASCADE)
     group_type = models.CharField(max_length=255, choices=GROUP_CHOICES)
+    group_link = models.CharField(max_length=255)
     show_name = models.CharField(max_length=255)
     year = models.IntegerField()
 

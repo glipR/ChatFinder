@@ -10,4 +10,6 @@ class ChatSerializer(serializers.ModelSerializer):
             'group_type',
             'show_name',
             'year',
+            'group_link',
+            'chat_code',
         )
