@@ -151,30 +151,19 @@
                 two-line
               >
                 <v-subheader inset>Chats</v-subheader>
-                <v-list-item
+                <Chat
                   v-for="chat in chats"
                   :key="chat.id"
+                  :chat="chat"
                 >
-                  <v-list-item-avatar>
-                    <v-icon
-                      class="grey lighten=1"
-                      dark
-                    >
-                      {{ chat.group_type == 'discord' ? 'mdi-discord' : (chat.group_type == "facebook" ? 'mdi-facebook' : 'mdi-help-circle') }}
-                    </v-icon>
-                  </v-list-item-avatar>
-                  <v-list-item-content style="text-align: left">
-                    <v-list-item-title v-text="chat.show_name"></v-list-item-title>
-                    <v-list-item-subtitle v-text="`${chat.year}`"></v-list-item-subtitle>
-                  </v-list-item-content>
-                </v-list-item>
+                </Chat>
                 <v-dialog
                   transition="dialog-bottom-transition"
                   max-width="600"
                   v-model="chat_dialog"
                 >
-                  <template v-slot:activator>
-                    <v-list-item @click="chat_dialog=true">
+                  <template v-slot:activator="dialog">
+                    <v-list-item @click="dialog.value=true">
                       <v-list-item-avatar>
                         <v-icon
                           color="green"
@@ -284,12 +273,13 @@
 
 <script>
 import axios from 'axios';
+import Chat from './components/Chat'
 
 export default {
   name: 'App',
 
   components: {
-    // HelloWorld,
+    Chat,
   },
 
   data: () => ({
